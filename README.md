@@ -91,11 +91,12 @@ The pattern worth noting across all six: several of these failed *silently* — 
 ## Setup
 
 1. Create a BigQuery dataset and set your project ID.
-2. Run the ingestion notebook (`notebooks/ingestion.ipynb`) to pull live 311 data from NYC Open Data into BigQuery.
-3. Run the analysis notebook (`notebooks/anomaly_trend_analysis.ipynb`) for anomaly detection and trend queries.
-4. Connect the Looker Studio dashboard to your BigQuery dataset (or use the included dashboard link).
-5. Add a Gemini API key as a Colab secret (`GEMINI_API_KEY`) to run the NL interface notebook (`notebooks/nl_interface.ipynb`).
-6. Run the eval harness cell in the same notebook to reproduce the evaluation results.
+2. Open `notebooks/nyc311_ingestion.ipynb` in Google Colab.
+3. Run the ingestion cells to pull live 311 data from NYC Open Data into BigQuery.
+4. Run the anomaly detection and trend analysis cells.
+5. Add a Gemini API key as a Colab secret (`GEMINI_API_KEY`) to run the NL interface cells.
+6. Run the eval harness cell to reproduce the evaluation results.
+7. Connect the Looker Studio dashboard to your BigQuery dataset, or use the [live dashboard link](https://datastudio.google.com/reporting/09b4083f-58b3-4744-bb7c-e244ce08405a) above.
 
 ---
 
@@ -104,12 +105,8 @@ The pattern worth noting across all six: several of these failed *silently* — 
 ```
 ├── README.md
 ├── failure-mode-log.md
-├── notebooks/
-│   ├── ingestion.ipynb
-│   ├── anomaly_trend_analysis.ipynb
-│   └── nl_interface.ipynb
-└── dashboard/
-    └── (Looker Studio link / export)
+└── notebooks/
+    └── nyc311_ingestion.ipynb
 ```
 
 ---
